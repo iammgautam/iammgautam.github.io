@@ -469,3 +469,24 @@ a { color: inherit; }
   .cv-h { break-after: avoid; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* ==========================================================
+   Notes (links to the notes site)
+   ========================================================== */
+.notes-block { display: grid; gap: var(--sp-8); }
+@media (min-width: 900px) { .notes-block { grid-template-columns: 1fr 1.1fr; gap: var(--sp-16); align-items: start; } }
+.notes-intro { display: grid; gap: var(--sp-4); justify-items: start; }
+.notes-intro p:not(.overline) { max-width: var(--measure); }
+.notes-topics {
+  display: grid; gap: var(--sp-3); padding: var(--sp-6);
+  background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md);
+}
+.topic-links { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+.topic-links + .overline { margin-top: var(--sp-3); }
+.topic-links a {
+  display: inline-flex; align-items: center; min-height: 36px; padding: 0 var(--sp-3);
+  border: 1px solid var(--color-border); border-radius: var(--radius-pill);
+  font-size: var(--fs-sm); color: var(--color-text-strong); text-decoration: none;
+  transition: border-color var(--dur-fast), color var(--dur-fast);
+}
+.topic-links a:hover { border-color: var(--color-accent); color: var(--color-accent); }
