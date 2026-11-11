@@ -1,208 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mithilesh Gautam</title>
+  <meta name="description" content="Engineer building retrieval, agents and the systems that serve LLMs. Bengaluru, India." />
+  <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)" />
+  <meta property="og:title" content="Mithilesh Gautam" />
+  <meta property="og:description" content="Retrieval, agents and LLM inference systems that stay fast and correct in production." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%237c5cff'/><text x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='white'>mg</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <body>
-    <!--Nav Bar-->
-    <nav>
-      <label class="logo">MG.</label>
-      <ul>
-        <li><a href="#projects">Project</a></li>
-        <li><a href="#skills">Tech Stack</a></li>
-        <li><a href="#footer">Contact</a></li>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="mark" href="#top" aria-label="Mithilesh Gautam, back to top">mg<span>.</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#focus">Focus</a></li>
+          <li><a href="#stack">Stack</a></li>
+          <li><a href="resume.html">Résumé</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-    <i id='dark-mode-toggle' class="fa fa-moon links"></i>
-    </nav>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch theme" data-theme-toggle>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </header>
 
-    <!--Main Body-->
-    <div class="main">
-      <h1>
-        Hi. I am
-        <span class="main-name">Mithilesh</span>
-        <span class="main-name">Gautam.</span>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap" id="top">
+      <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Bengaluru, India · Open to relocation</p>
+      <h1 class="display">
+        I build LLM systems that stay <em>fast</em> and <em>correct</em> in production.
       </h1>
-
-      <div class="main-about">
-        <p>
-          I am a Junior Developer with fundamental knowledge of software design,
-          development and testing. I enjoy writting clean code and working
-          application design and development with an innovative concept to the
-          next evolutionary phase.
-        </p>
-
-        <a
-          class="resume"
-          href="https://drive.google.com/file/d/17p3Ws8Ovs1-8Sfg02AB1ZrFVrTAGRIoc/view?usp=sharing"
-        >
-          <button class="btn-outline">Resume</button>
-        </a>
+      <p class="lede">
+        I'm Mithilesh Gautam, a backend engineer with 4+ years in production SaaS. I work on retrieval, tool-using agents and the
+        database and backend layers under them. Lately I'm working down the stack, toward
+        LLM inference and serving.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="resume.html">View résumé</a>
       </div>
-    </div>
+    </section>
 
-    <!--Project Section-->
-    <section id="projects" class="projects">
-      <h1 class="project-title">projects</h1>
+    <!-- Signature: latency -->
+    <section class="wrap proof" aria-labelledby="proof-title">
+      <h2 class="sr-only" id="proof-title">Results in numbers</h2>
+      <div class="latency reveal" data-latency>
+        <div class="latency-head">
+          <p class="overline">Analytics query</p>
+          <p class="latency-figure"><span class="big">250×</span> faster</p>
+        </div>
+        <div class="bars" role="img" aria-label="Query time dropped from 239 seconds to 0.9 seconds">
+          <div class="bar-row">
+            <span class="bar-label">Before</span>
+            <span class="bar"><span class="fill fill-before"></span></span>
+            <span class="bar-val">239 s</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">After</span>
+            <span class="bar"><span class="fill fill-after"></span></span>
+            <span class="bar-val accent">0.9 s</span>
+          </div>
+        </div>
+        <button class="replay" type="button" data-replay>Replay</button>
+      </div>
 
-      <!-- Project Container -->
-      <div class="project-container">
-        <div class="project-card">
-          <div class="cards">
-            <div class="project-img">
-              <img src="./project_img/task-list.png" alt="" />
-            </div>
-            <div class="project-details">
-              <h3>Todo List</h3>
-              <p>
-                To-Do List with CRUD Functionality Database and Login Authentication implemented in Django Framework.
-              </p>
+      <dl class="stats">
+        <div class="stat reveal">
+          <dt class="overline">Queries per request</dt>
+          <dd><span class="from">500+</span><span class="arrow" aria-hidden="true">→</span><span class="to">5–10</span></dd>
+        </div>
+        <div class="stat reveal">
+          <dt class="overline">Request SQL time</dt>
+          <dd><span class="from">15–25 s</span><span class="arrow" aria-hidden="true">→</span><span class="to">1–2 s</span></dd>
+        </div>
+        <div class="stat reveal">
+          <dt class="overline">Extra queue infra</dt>
+          <dd><span class="from">Celery + Redis</span><span class="arrow" aria-hidden="true">→</span><span class="to">Postgres</span></dd>
+        </div>
+      </dl>
+    </section>
 
-              <div class="project-icons">
-                <a href="https://github.com/zengboi/To-Do-List"><i class="fab fa-github links"></i></a>
-                <i class="fas fa-link links"></i>
-              </div>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="project-img">
-              <img src="./project_img/image.png" alt="" />
-            </div>
-            <div class="project-details">
-              <h3>Flipkart Price Tracker</h3>
-              <p>
-                A simple web scraper application that takes in user preferred product from Flipkart to track it's price using Django Framework
-              </p>
-              <div class="project-icons">
-                <a href="https://github.com/zengboi/FlipCart-Tracker"><i class="fab fa-github links"></i></a>
-                <i class="fas fa-link links"></i>
-            </div>
-            </div>
-          </div>
-          <div class="cards">
-            <div class="project-img">
-              <img src="./project_img/startpage.png" alt="" />
-            </div>
-            <div class="project-details">
-              <h3>Project Title</h3>
-              <p>
-                Lorem Ipsum and the great project details are in this section,
-                do check it out once. so that they can use it and play with it
-                and dance with it
-              </p>
-              <div class="project-icons">
-                <a href="https://github.com/zengboi/FlipCart-Tracker"><i class="fab fa-github links"></i></a>
-                <i class="fas fa-link links"></i>
-              </div>    
-            </div>
-          </div>
+    <!-- Work -->
+    <section class="wrap section" id="work" aria-labelledby="work-title">
+      <header class="section-head">
+        <p class="overline">01 · Selected work</p>
+        <h2 class="h2" id="work-title">Work that runs in production</h2>
+      </header>
+
+      <ol class="work-list">
+        <li class="work reveal">
+          <div class="work-meta"><span class="tag">LLM</span><span class="tag">Production</span></div>
+          <h3 class="h3">RAG and agent platform</h3>
+          <p>Retrieval-augmented generation on PostgreSQL and pgvector, with multi-provider LLM routing, embeddings, tool orchestration and agent workflows.</p>
+          <p class="outcome">Runs in production inside a multi-tenant SaaS product.</p>
+        </li>
+        <li class="work reveal">
+          <div class="work-meta"><span class="tag">Infra</span><span class="tag">PostgreSQL</span></div>
+          <h3 class="h3">Postgres-native task executor</h3>
+          <p>Distributed task execution built entirely on PostgreSQL: queuing, fan-out and join, and idempotency.</p>
+          <p class="outcome">No Celery, no Redis. Fewer moving parts to run.</p>
+        </li>
+        <li class="work reveal">
+          <div class="work-meta"><span class="tag">Performance</span><span class="tag">SQL</span></div>
+          <h3 class="h3">Analytics query, 239 s → 0.9 s</h3>
+          <p>Rollup tables, a deliberate indexing strategy, JSONB and full-text search.</p>
+          <p class="outcome">Over 250× faster.</p>
+        </li>
+        <li class="work reveal">
+          <div class="work-meta"><span class="tag">Performance</span><span class="tag">ORM</span></div>
+          <h3 class="h3">ORM query elimination</h3>
+          <p>Found and removed N+1 patterns across hot request paths.</p>
+          <p class="outcome">Queries per request from 500+ to about 5–10. SQL time from ~20 s to ~1–2 s.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Focus -->
+    <section class="wrap section" id="focus" aria-labelledby="focus-title">
+      <header class="section-head">
+        <p class="overline">02 · Focus</p>
+        <h2 class="h2" id="focus-title">What I'm digging into</h2>
+      </header>
+      <div class="focus-grid">
+        <article class="focus reveal">
+          <span class="focus-n" aria-hidden="true">a</span>
+          <h3 class="h3">LLM inference</h3>
+          <p>Serving engines like vLLM, continuous batching, KV-cache management and quantization.</p>
+        </article>
+        <article class="focus reveal">
+          <span class="focus-n" aria-hidden="true">b</span>
+          <h3 class="h3">Retrieval quality</h3>
+          <p>Chunking, hybrid search, reranking and evaluation for RAG.</p>
+        </article>
+        <article class="focus reveal">
+          <span class="focus-n" aria-hidden="true">c</span>
+          <h3 class="h3">Agents</h3>
+          <p>Reliable tool calling, orchestration, and how agents fail.</p>
+        </article>
+        <article class="focus reveal">
+          <span class="focus-n" aria-hidden="true">d</span>
+          <h3 class="h3">Databases as infrastructure</h3>
+          <p>PostgreSQL for queues, vectors and search, before reaching for another system.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="wrap section" id="stack" aria-labelledby="stack-title">
+      <header class="section-head">
+        <p class="overline">03 · Stack</p>
+        <h2 class="h2" id="stack-title">Tools I reach for</h2>
+      </header>
+      <div class="stack-groups">
+        <div class="stack-group reveal">
+          <h3 class="overline">Languages</h3>
+          <ul class="chips"><li>Python</li><li>TypeScript</li><li>SQL</li></ul>
+        </div>
+        <div class="stack-group reveal">
+          <h3 class="overline">Backend</h3>
+          <ul class="chips"><li>Django</li><li>PostgreSQL</li><li>pgvector</li><li>Redis</li></ul>
+        </div>
+        <div class="stack-group reveal">
+          <h3 class="overline">Frontend</h3>
+          <ul class="chips"><li>Vue.js</li></ul>
+        </div>
+        <div class="stack-group reveal">
+          <h3 class="overline">Infra</h3>
+          <ul class="chips"><li>Docker</li><li>AWS</li><li>Linux</li><li>Git</li></ul>
         </div>
       </div>
     </section>
 
-    <!-- Technology Stack -->
-    <section class="skills" id="skills">
-      <h1 class="skills-title">tech stack</h1>
+    <!-- Contact -->
+    <section class="wrap section contact" id="contact" aria-labelledby="contact-title">
+      <p class="overline">04 · Contact</p>
+      <h2 class="display contact-title" id="contact-title">Let's talk retrieval, agents or inference.</h2>
+      <p class="lede">I'm open to roles and conversations. Email is the fastest way to reach me.</p>
 
-      <div class="skills-container">
-        <div class="skills-card">
-          <div class="tech-list">
-            <div class="tech-title">
-              <h3>Languages</h3>
-            </div>
-            <div class="tech-details">
-              <p>
-                HTML <br />
-                CSS <br />
-                Python <br />
-                Javascript <br />
-              </p>
-            </div>
-          </div>
-          <div class="tech-list">
-            <div class="tech-title">
-              <h3>Frameworks</h3>
-            </div>
-            <div class="tech-details">
-              <p>
-                Flask<br />
-                Django
-                <br />
-              </p>
-            </div>
-          </div>
-          <div class="tech-list">
-            <div class="tech-title">
-              <h3>Databases</h3>
-            </div>
-            <div class="tech-details">
-              <p>
-                PostgreSQL <em>(SQL)</em><br />
-                MongoDB <em>(NoSQL)</em><br />Redis
-              </p>
-            </div>
-          </div>
-          <div class="tech-list">
-            <div class="tech-title last-title">
-              <h3>Tools</h3>
-            </div>
-            <div class="tech-details">
-              <p>
-                Postman<br />
-                Git<br />
-                Docker
-                <br />AWS <br>
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="email-row">
+        <a class="email" href="mailto:mithileshgautam666@gmail.com">mithileshgautam666@gmail.com</a>
+        <button class="btn btn-ghost copy" type="button" data-copy="mithileshgautam666@gmail.com">
+          <span data-copy-label>Copy email</span>
+        </button>
+        <span class="sr-only" role="status" aria-live="polite" data-copy-status></span>
       </div>
+
+      <ul class="links">
+        <li><a href="https://www.linkedin.com/in/iammgautam" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://github.com/iammgautam" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://x.com/iammgautam" target="_blank" rel="noopener">X <span aria-hidden="true">↗</span></a></li>
+        <li><a href="resume.html">Résumé</a></li>
+        <li><a href="resume.pdf" download="Mithilesh-Gautam-Resume.pdf">Download résumé (PDF)</a></li>
+      </ul>
     </section>
+  </main>
 
-    <!-- Footer Section -->
-    <div id="footer">
-      <div id="footer-footer-iconsLink">
-        <a
-          href="https://www.linkedin.com/in/iammgautam"
-          class="fab fa-linkedin-in footer-icons"
-          aria-hidden="true"
-          target="_blank"
-        >
-        </a>
-        <a
-          href="https://www.github.com/zengboi"
-          class="fab fa-github footer-icons"
-          aria-hidden="true"
-          target="_blank"
-        >
-        </a>
-        <a
-          href="mailto:mithileshgautam666@gmail.com"
-          class="fa fa-envelope footer-icons"
-          aria-hidden="true"
-          target="_blank"
-        >
-        </a>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+  <footer class="wrap site-footer">
+    <p>© <span data-year>2026</span> Mithilesh Gautam</p>
+    <p class="mono">Hand-built. No framework, no tracking.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
