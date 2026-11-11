@@ -218,7 +218,7 @@ a { color: inherit; }
   border-radius: 50%; background: var(--color-accent);
 }
 @media (max-width: 560px) {
-  .nav li:nth-child(2), .nav li:nth-child(3) { display: none; }
+  .nav .nav-optional { display: none; }
   .nav a { padding: 0 var(--sp-2); }
 }
 .theme-toggle {
