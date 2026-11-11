@@ -330,9 +330,16 @@ a { color: inherit; }
 .focus-grid { display: grid; gap: var(--sp-4); }
 @media (min-width: 640px) { .focus-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1000px) { .focus-grid { grid-template-columns: repeat(4, 1fr); } }
-.focus { padding: var(--sp-6); display: grid; gap: var(--sp-2); align-content: start; }
+.focus { padding: var(--sp-6); display: grid; gap: var(--sp-2); grid-template-rows: auto auto 1fr auto; }
 .focus-n { font: italic 400 var(--fs-xl)/1 var(--font-display); color: var(--color-accent); margin-bottom: var(--sp-2); }
 .focus p { font-size: var(--fs-sm); }
+.focus-link {
+  align-self: end; justify-self: start; margin-top: var(--sp-2);
+  display: inline-flex; align-items: center; gap: var(--sp-1); min-height: 32px;
+  font: 500 var(--fs-xs)/1 var(--font-mono); color: var(--color-accent); text-decoration: none;
+}
+.focus-link:hover span { transform: translateX(3px); }
+.focus-link span { transition: transform var(--dur-fast) var(--ease-out); }
 
 .stack-groups { display: grid; gap: var(--sp-6); }
 @media (min-width: 760px) { .stack-groups { grid-template-columns: repeat(4, 1fr); } }
