@@ -28,9 +28,9 @@
       <a class="mark" href="#top" aria-label="Mithilesh Gautam, back to top">mg<span>.</span></a>
       <nav aria-label="Primary">
         <ul class="nav">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#focus">Focus</a></li>
-          <li><a href="#stack">Stack</a></li>
+          <li class="nav-optional"><a href="#work">Work</a></li>
+          <li class="nav-optional"><a href="#focus">Focus</a></li>
+          <li><a href="notes/">Notes</a></li>
           <li><a href="resume.html">Résumé</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -145,21 +145,25 @@
           <span class="focus-n" aria-hidden="true">a</span>
           <h3 class="h3">LLM inference</h3>
           <p>Serving engines like vLLM, continuous batching, KV-cache management and quantization.</p>
+          <a class="focus-link" href="notes/llm/inference-basics/" aria-label="Read my notes on LLM inference">Read the notes <span aria-hidden="true">→</span></a>
         </article>
         <article class="focus reveal">
           <span class="focus-n" aria-hidden="true">b</span>
           <h3 class="h3">Retrieval quality</h3>
           <p>Chunking, hybrid search, reranking and evaluation for RAG.</p>
+          <a class="focus-link" href="notes/llm/hybrid-search-and-reranking/" aria-label="Read my notes on retrieval quality">Read the notes <span aria-hidden="true">→</span></a>
         </article>
         <article class="focus reveal">
           <span class="focus-n" aria-hidden="true">c</span>
           <h3 class="h3">Agents</h3>
           <p>Reliable tool calling, orchestration, and how agents fail.</p>
+          <a class="focus-link" href="notes/llm/agents/" aria-label="Read my notes on agents">Read the notes <span aria-hidden="true">→</span></a>
         </article>
         <article class="focus reveal">
           <span class="focus-n" aria-hidden="true">d</span>
           <h3 class="h3">Databases as infrastructure</h3>
           <p>PostgreSQL for queues, vectors and search, before reaching for another system.</p>
+          <a class="focus-link" href="notes/postgresql/" aria-label="Read my notes on PostgreSQL">Read the notes <span aria-hidden="true">→</span></a>
         </article>
       </div>
     </section>
@@ -190,9 +194,39 @@
       </div>
     </section>
 
+    <!-- Notes -->
+    <section class="wrap section" id="notes" aria-labelledby="notes-title">
+      <div class="notes-block">
+        <div class="notes-intro">
+          <p class="overline">04 · Notes</p>
+          <h2 class="h2" id="notes-title">Notes I keep while learning</h2>
+          <p>Working notes on algorithms, system design, databases and LLM systems, written to be re-read before interviews and design reviews.</p>
+          <a class="btn btn-primary" href="notes/">Read the notes</a>
+        </div>
+        <div class="notes-topics reveal">
+          <h3 class="overline">Interview core</h3>
+          <ul class="topic-links">
+            <li><a href="notes/dsa/">Data structures &amp; algorithms</a></li>
+            <li><a href="notes/lld/">Low-level design</a></li>
+            <li><a href="notes/hld/">High-level design</a></li>
+            <li><a href="notes/behavioral/">Behavioral</a></li>
+          </ul>
+          <h3 class="overline">Engineering deep dives</h3>
+          <ul class="topic-links">
+            <li><a href="notes/postgresql/">PostgreSQL</a></li>
+            <li><a href="notes/python-django/">Python &amp; Django</a></li>
+            <li><a href="notes/llm/">LLM, RAG &amp; agents</a></li>
+            <li><a href="notes/networking/">Networking &amp; APIs</a></li>
+            <li><a href="notes/os-concurrency/">OS &amp; concurrency</a></li>
+            <li><a href="notes/production/">Production engineering</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact -->
     <section class="wrap section contact" id="contact" aria-labelledby="contact-title">
-      <p class="overline">04 · Contact</p>
+      <p class="overline">05 · Contact</p>
       <h2 class="display contact-title" id="contact-title">Let's talk retrieval, agents or inference.</h2>
       <p class="lede">I'm open to roles and conversations. Email is the fastest way to reach me.</p>
 
