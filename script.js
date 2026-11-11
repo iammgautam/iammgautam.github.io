@@ -2,7 +2,7 @@ const root = document.documentElement;
 root.classList.add('js');
 
 // Theme: one toggle, choice remembered. Default follows the OS.
-document.querySelector('[data-theme-toggle]').addEventListener('click', () => {
+document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
   const dark = root.dataset.theme
     ? root.dataset.theme === 'dark'
     : matchMedia('(prefers-color-scheme: dark)').matches;
@@ -28,14 +28,14 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-document.querySelector('[data-replay]').addEventListener('click', () => {
+document.querySelector('[data-replay]')?.addEventListener('click', () => {
   latency.classList.remove('is-run');
   void latency.offsetWidth; // restart transition
   latency.classList.add('is-run');
 });
 
 // Active nav link for the section in view.
-const links = new Map([...document.querySelectorAll('.nav a')].map((a) => [a.hash.slice(1), a]));
+const links = new Map([...document.querySelectorAll('.nav a[href^="#"]')].map((a) => [a.hash.slice(1), a]));
 const navIO = new IntersectionObserver((entries) => {
   for (const e of entries) {
     if (!e.isIntersecting) continue;
@@ -47,10 +47,10 @@ links.forEach((_, id) => { const s = document.getElementById(id); if (s) navIO.o
 
 // Copy email with inline feedback; falls back to mailto link if clipboard is blocked.
 const copyBtn = document.querySelector('[data-copy]');
-const label = copyBtn.querySelector('[data-copy-label]');
+const label = copyBtn?.querySelector('[data-copy-label]');
 const status = document.querySelector('[data-copy-status]');
 let t;
-copyBtn.addEventListener('click', async () => {
+copyBtn?.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(copyBtn.dataset.copy);
     label.textContent = 'Copied';
